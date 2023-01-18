@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features ="src/test/resources" ,
         glue = "com/udun/step_defs",
         dryRun = false,
-        tags =""
+        tags =" @wip"
 )
 public class CukesRunner {
 }
