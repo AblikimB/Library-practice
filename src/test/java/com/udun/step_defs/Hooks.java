@@ -14,10 +14,10 @@ public class Hooks {
     public void setUp(){
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get(ConfigurationReader.getProperty("library_url"));
-        Driver.getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        Driver.getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
-//    @After
-//    public void tearDown(){
-//        Driver.closeDriver();
-//    }
+    @After
+    public void tearDown(){
+        Driver.closeDriver();
+    }
 }
