@@ -11,12 +11,11 @@ import org.junit.runner.RunWith;
                "html:target/cucumber-report.html",
                "rerun:target/rerun.txt" ,
                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
-       }
-               ,
-        features ="src/test/resources" ,
+       },
+        features ="src/test/resources/features" ,
         glue = "com/udun/step_defs",
         dryRun = false,
-        tags =" @wip"
+        tags ="@wip"
 )
 public class CukesRunner {
 }
