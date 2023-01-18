@@ -1,5 +1,6 @@
 package com.udun.page;
 
+import com.udun.utility.ConfigurationReader;
 import com.udun.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,4 +18,13 @@ public class LoginPage {
 
     @FindBy(tagName = "button")
     public WebElement signIn;
+
+    public void login(){
+        username.sendKeys(ConfigurationReader.getProperty("librarian_username"));
+        password.sendKeys(ConfigurationReader.getProperty("librarian_password"));
+        signIn.click();
+}
+
+
+
 }
